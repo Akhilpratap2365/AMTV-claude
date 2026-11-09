@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Native day/night: dark when the system is dark, light when it is light.
+         The page itself decides how it looks via prefers-color-scheme; nothing is force-darkened. -->
+    <style name="AppTheme" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@color/app_bg</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+    </style>
+</resources>

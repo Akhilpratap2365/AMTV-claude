@@ -1,0 +1,41 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.applemusic.tvbrowser'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.applemusic.tvbrowser"
+        minSdk 21
+        targetSdk 34
+        versionCode 3
+        versionName "3.0.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+        }
+        debug {
+            debuggable true
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+}
+
+dependencies {
+    // Only used to switch OFF forced/algorithmic WebView dark mode on Android 10-12.
+    implementation 'androidx.webkit:webkit:1.10.0'
+}
